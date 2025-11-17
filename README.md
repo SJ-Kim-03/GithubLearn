@@ -2,30 +2,44 @@
 
 ## Chapter 00. git 기본
 
-### git init
+### CLI 기본 명령어
+
+```
+$ git init
+```
 
 - .git 폴더: local repository 생성
 - 초기화 과정
 - shift + command + . : 숨김 파일 확인
 
-### git config -- global user.email(.name) "email(name)"
+```
+$ git config -- global user.email(.name) "email(name)"
+```
 
 - 수정자 정보 등록
 - 이메일, 이름 입력
 
-### git add file
+```
+$ git add file
+```
 
 - 버전으로 만들 파일(변경할 사항) 선택
 
-### git commit -m
+```
+$ git commit -m
+```
 
 - 커밋의 상세 설명 추가
 
-### git log
+```
+$ git log
+```
 
 - 커밋 확인 가능, 최신순
 
-### git checkout 7자리
+```
+$ git checkout 7자리
+```
 
 - 이전 커밋으로 되돌아가기
 - 7자리 대신 - 사용시 최신 커밋으로 복원
@@ -34,20 +48,23 @@
 - restore: 파일 복구
 - checkout은 실무에서 사용하지 않음
 
-### Repository 생성
+```
+$ git remote add origin 주소
+```
 
-- 주소: https://github.com/SJ-Kim-03/ComputerScience.git
-
-### git remote and origin 주소
-
+- repository 생성 후 연결 (https://github.com/SJ-Kim-03/GithubLearn.git)
 - 원격 저장소 주소 입력
 - origin: 원격 저장소
 
-### git branch -M name of branch
+```
+$ git branch -M name of branch
+```
 
 - 저장될 branch 생성
 
-### git push origin main
+```
+$ git push origin main
+```
 
 - 원격 저장소의 branch에 업로드
 - origin의 main이라는 branch로 올려라
@@ -55,12 +72,16 @@
 - CLI, 코드트리 환경에서는 master 브랜치 생성, 변경 가능
 - name, token 입력
 
-### git clone 원격 저장소 주소 .
+```
+$ git clone 원격 저장소 주소 .
+```
 
 - 로컬 저장소에 내려받기
 - 띄우고 마침표 하지 않으면 리포지토리 이름 폴더가 생성됨
 
-### git pull origin main
+```
+$ git pull origin main
+```
 
 - 다른 로컬 저장소에서 최신본 가져오기
 
