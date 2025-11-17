@@ -12,3 +12,4 @@
 - 병합 커밋(merge commit): (A+x)+(A+y)=A+x+y
 - 빨리 감기(fast-forward): A+(A+x)=A+x
 - 충돌(conflict): (A+x)+(A+x')=x?orx'?
+- feature/new 실습 브랜치: 빨리 감기, main에 단순히 new.md 파일 추가
