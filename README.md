@@ -147,4 +147,37 @@ $ git pull origin main
 - 병합 커밋(merge commit): (A+x)+(A+y)=A+x+y
 - 빨리 감기(fast-forward): A+(A+x)=A+x
 - 충돌(conflict): (A+x)+(A+x')=x?orx'?
-- feature/new 실습 브랜치: 빨리 감기, main에 단순히 new.md 파일 추가
+- 충돌 시 Vscode 상에서 <<<<<<< HEAD (Current Change) ~~~ >>>>>>> main (Incoming Change)가 표시, 확인 후 수정 필요
+- 여러 브랜치에서 작업하던 것을 하나의 브랜치로 수렴되도록 하는 과정이 병합
+
+### 풀 리퀘스트(pull request)
+
+- 협력자에게 브랜치 병합을 요청하는 메시지를 보내는 것
+- 새로운 브랜치 커밋, 푸시 후 github에서 compare % pull request 버튼 확인 가능
+  ![compare_and_pull_request_img](img/compare_and_pull_request.png)
+- base: 병합된 커밋이 들어갈 베이스 브랜치 설정
+- compare: 병합이 될, 반영시킬 비교 브랜치 설정
+- Able to merge: 병합 가능한 지 여부, 충돌 시 conflict 표시
+- Add a title: 풀 리퀘스트 제목
+- Add a description: 풀 리퀘스트 설명, 스크린샷 첨부 or 테스트 방법 등, 이미지 붙여넣기 가능
+- Reviewers: 협력자가 여러명인 경우, 몇 명을 선택해 리뷰 요청 가능, 보통 같은 팀원 or 연관 동료
+- Assingees: 풀 리퀘스트 담당 동료 지정, 보통 자기 자신
+- Labels: 풀 리퀘스트 라벨, 예를 들어 [버그], [리뷰 필요], [프론트엔드], [벡엔드] 등
+  ![pull_request_page_info_img](img/pull_request_page_info.png)
+- 협력자는 풀 리퀘스트를 확인하고 검토 가능
+- 코드 라인마다 댓글을 통해 토론 가능
+- 수락(Accept), 수정 요청(Request change), 병합(Merge pull request) 가능
+- 완료 후, 소스트리(10분 간격으로 자동 패치)에서 패치(fetch) 후 main 브랜치에서 로컬 저장소 반영(pull)
+
+### 릴리즈(Release), 출시
+
+- 프로그램 출시(Release), 업그레이드 시 '버전(version)'을 명시 (ex. v19.13.2)
+- 이는 메이저(major), 마이너(minor), 메인터넌스(maintenance) 버전으로 나뉨
+- 메이저: 사용자들이 크게 느낄 변화 적용
+- 마이너: 사용자들이 느낄 작은 변화 적용
+- 메인터넌스: 버그나 유지 보수 등 작은 수정 시
+- LTS(Long Time Support): 장기 지원 버전, 일반 버전보더 장기간 걸쳐 지원
+- 릴리즈 시 태그(tag) 표시 가능, 간단하게 버전 표시, 소스트리에서 입력 가능
+- 태그 또한 커밋을 가리키는 포인터, 푸시(push all tag 체크)를 통해 원격 저장소에 적용 가능
+- 원격 저장소에서 해당 버전을 압축 파일로 다운 가능
+  ![github_tag_img](img/github_tag.png)
